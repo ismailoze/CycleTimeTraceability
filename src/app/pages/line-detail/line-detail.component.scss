@@ -1,0 +1,90 @@
+.progress-bar span {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInText 1s ease forwards;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.progress-bar:hover {
+    background-color: #0056b3; /* Hoverda maviye dönüş */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.progress-bar {
+    background-color: #27548a;
+    border-radius: 10px; /* Yumuşak köşeler */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Başlangıçta ışık solda */
+    width: 200%; /* Işığın genişliği genişletildi */
+    height: 200%; /* Işığın yüksekliği de artırıldı */
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(45deg); /* Back slash şeklinde eğim oluşturuldu */
+    animation: moveLight 6s linear infinite; /* Işığın soldan sağa kayması için animasyon */
+}
+
+/* Işık kaymasının animasyonu */
+@keyframes moveLight {
+    0% {
+        left: -100%; /* Başlangıç sol dış tarafta */
+    }
+    100% {
+        left: 100%; /* Işık sağ dış tarafta duracak */
+    }
+}
+
+.time-box {
+    font-size: 2.2rem;
+    padding-top: 1rem;
+    font-weight: bold;
+  
+    @media (max-width: 576px) {
+      font-size: 1.8rem;
+      padding-top: 0.5rem;
+    }
+  
+    @media (min-width: 768px) {
+      font-size: 2.2rem;
+    }
+  
+    @media (min-width: 992px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .time-box-2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+  
+    // Responsive ayarlar
+    @media (max-width: 576px) {
+      font-size: 1.4rem;
+    }
+  
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+  
+    @media (min-width: 992px) {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,50 @@
+<div class="card p-3 mb-3 d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-start">
+        <h5 class="font-weight-bold">{{ line.title }}</h5>
+        <div class="d-flex">
+            <div class="mr-3">
+                <small class="d-block">Son Saat Gerc./Hedef</small>
+                <strong>
+                    <span [appCounter]="line.actualProduction" [duration]="800"></span> /
+                    <span [appCounter]="line.targetProduction"></span>
+                </strong>
+            </div>
+            <!-- OEE görünümü -->
+            <div *ngIf="viewMode === 'oee'; else showCycleTime">
+                <div>
+                    <small class="d-block">Son Saat OEE</small>
+                    <strong>
+                        <span [appCounter]="line.lastHourOee"></span>%
+                    </strong>
+                </div>
+            </div>
+            <!-- Cycle Time görünümü -->
+            <ng-template #showCycleTime>
+                <div>
+                    <small class="d-block">Son Saat Cycle Time</small>
+                    <strong>
+                        <span [appCounter]="line.lastHourCycleTime"></span>sn
+                    </strong>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+
+    <div class="chart-container mt-3">
+        <canvas #chartCanvas></canvas>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <div>
+            <span class="badge" [ngClass]="[getStatusAlarm(), getStatusClass()]">
+                <i [class]="getStatusIcon()" class="mr-2"></i>
+                {{ line.status }}
+            </span>
+        </div>
+        <small>Son Güncelleme : {{ line.updatedAt }}</small>
+    </div>
+    <a class="small-box-footer mt-3" [routerLink]="['/line', line.id]">
+        <span class="mr-2">Detaylar</span>
+        <i class="fa fa-arrow-circle-right"></i>
+    </a>
+</div>

@@ -1,0 +1,25 @@
+<section class="content-header p-1">
+    <div class="container-fluid">
+        <div class="position-relative bg-header text-white rounded px-2 py-3">
+
+            <!-- Ortalanmış Başlık -->
+            <div class="position-absolute w-100 text-center d-none d-md-block"
+                style="top: 50%; transform: translateY(-50%); left: 0;">
+                <h1 class="h4 mb-0">{{ title }}</h1>
+            </div>
+
+            <!-- Mobil cihazlar için alternatif başlık (üstte gösterilir) -->
+            <div class="d-block d-md-none text-center mb-2">
+                <h1 class="h4 mb-0">{{ title }}</h1>
+            </div>
+
+            <!-- Sağda Line States (d-flex ile responsive) -->
+            <div class="d-flex justify-content-end flex-wrap">
+                <ng-container *ngFor="let item of lineStates">
+                    <app-report-box class="ml-2 mb-2" [lineState]="item"></app-report-box>
+                </ng-container>
+            </div>
+
+        </div>
+    </div>
+</section>

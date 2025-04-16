@@ -1,0 +1,169 @@
+<app-report-header [title]="'Refrigerator CycleTime Traceability'"></app-report-header>
+
+<!-- Main content -->
+<section class="content">
+    <!-- Default box -->
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <!-- /.col (right) -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <!-- HAT -->
+                            <div class="col-12 col-md-auto mb-2 mb-md-0">
+                                <h3 class="font-weight-bold text-muted mb-0">HAT :</h3>
+                            </div>
+
+                            <!-- GRUPLAMA -->
+                            <div class="col">
+                                <div class="alert alert-danger alert-dismissible d-flex justify-content-center align-items-center mb-0 py-2 px-3"
+                                    style="height: 100%;">
+                                    <h5 class="mb-0 text-center">GRUPLAMA 3 (PLANSIZ DURUŞ)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Son Saatlik Ort. -->
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-3 d-flex align-items-center mb-2 mb-md-0">
+                                <h6 class="font-weight-bold text-muted mb-0">Son Saatlik Ort. :</h6>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <div class="progress" style="height: 2.25rem;">
+                                    <div class="progress-bar progress-bar-striped d-flex align-items-center justify-content-center"
+                                        role="progressbar" aria-valuenow="88.9" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 88.9%; position: relative;">
+                                        <span class="text-white font-weight-bold" style="font-size: 1rem;">425/478
+                                            %88.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Toplam Üretim -->
+                        <div class="row">
+                            <div class="col-12 col-md-3 d-flex align-items-center mb-2 mb-md-0">
+                                <h6 class="font-weight-bold text-muted mb-0">Toplam Üretim :</h6>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <div class="progress" style="height: 2.25rem;">
+                                    <div class="progress-bar progress-bar-striped d-flex align-items-center justify-content-center"
+                                        role="progressbar" aria-valuenow="91.28" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 91.28%; position: relative;">
+                                        <span class="text-white font-weight-bold" style="font-size: 1rem;">3665/4015
+                                            %91.28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <h6 class="text-muted text-md">Toplam Duruş</h6>
+                                        <p class="time-box text-danger">00:32:52</p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h6 class="text-muted text-md">Toplam Çalışma</h6>
+                                        <p class="time-box text-success">04:27:08</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="text-center text-muted text-md">Cycle Time (Sn.)</h5>
+                                    <div class="row text-center justify-content-center">
+                                        <div class="col-6 col-sm-3">
+                                            <h6 class="text-muted text-md">Min.</h6>
+                                            <p class="time-box">28</p>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <h6 class="text-muted text-md">Ort.</h6>
+                                            <p class="time-box">39</p>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <h6 class="text-muted text-md">Maks.</h6>
+                                            <p class="time-box">76</p>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <h6 class="text-muted text-md">Son Çevrim</h6>
+                                            <p class="time-box text-danger">54</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-6">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <h5 class="text-muted text-md">Toplam Duruş</h5>
+                                        <p class="time-box text-danger">00:32:52</p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h5 class="text-muted text-md">Toplam Çalışma</h5>
+                                        <p class="time-box text-success">04:27:08</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="text-center text-muted text-md">Cycle Time (Sn.)</h5>
+                                <div class="row text-center justify-content-center">
+                                    <div class="col-6 col-sm-3">
+                                        <h6 class="text-muted text-md">Min.</h6>
+                                        <p class="time-box-2">28</p>
+                                    </div>
+                                    <div class="col-6 col-sm-3">
+                                        <h6 class="text-muted text-md">Ort.</h6>
+                                        <p class="time-box-2">39</p>
+                                    </div>
+                                    <div class="col-6 col-sm-3">
+                                        <h6 class="text-muted text-md">Maks.</h6>
+                                        <p class="time-box-2">76</p>
+                                    </div>
+                                    <div class="col-6 col-sm-3">
+                                        <h6 class="text-muted text-md">Son Çevrim</h6>
+                                        <p class="time-box-2 text-danger">54</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- /.col (right) -->
+            </div>
+        </div>
+    </div>
+    <!-- /.card -->
+</section>
+<!-- /.content -->

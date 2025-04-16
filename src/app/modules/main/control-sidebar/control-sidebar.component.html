@@ -1,0 +1,31 @@
+<h6>Kontrol Panelini Özelleştir</h6>
+<hr class="mb-2" />
+<div style="padding: 8px 0">
+    <div style="display: flex; align-items: center;">
+        <mat-checkbox color="primary" id="darkMode" [(ngModel)]="darkMode" (change)="handleDarkModeChange($event)">
+            Karanlık mod
+        </mat-checkbox>
+    </div>
+    <div style="display: flex; align-items: center; margin-top: 1rem;">
+        <label for="navbarLightVariants">
+            Aydınlık Navbar Renkleri
+        </label>
+    </div>
+    <pf-select [value]="navbarVariant" [options]="navbarLightVariants" type="custom" label="Light Navbar Variants"
+        (change)="onNavbarVariantChange($event)">
+    </pf-select>
+    <div style="display: flex; align-items: center; margin-top: 1rem;">
+        <label for="navbarDarkVariants">
+            Karanlık Navbar Renkleri
+        </label>
+    </div>
+    <pf-select [value]="navbarVariant" [options]="navbarDarkVariants" type="custom" label=" Dark Navbar Variants"
+        (change)="onNavbarVariantChange($event)">
+    </pf-select>
+    <div style="display: flex; align-items: center; margin-top: 1rem;">
+        <label for="refreshInterval">Veri Yenileme Aralığı</label>
+    </div>
+    <pf-select [value]="refreshInterval" [options]="dataRefreshIntervalVariants" type="custom"
+        label="Refresh Interval (minutes)" (change)="onRefreshIntervalChange($event)">
+    </pf-select>
+</div>

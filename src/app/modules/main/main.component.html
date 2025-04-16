@@ -1,0 +1,14 @@
+<app-header *ngIf="appLoaded"></app-header>
+
+<div *ngIf="appLoaded" class="content-wrapper">
+    <router-outlet></router-outlet>
+</div>
+
+<app-footer *ngIf="appLoaded"></app-footer>
+<app-control-sidebar *ngIf="appLoaded"></app-control-sidebar>
+<div
+    id="sidebar-overlay"
+    *ngIf="appLoaded"
+    (click)="onToggleMenuSidebar()"
+></div>
+<app-loading *ngIf="!appLoaded"></app-loading>

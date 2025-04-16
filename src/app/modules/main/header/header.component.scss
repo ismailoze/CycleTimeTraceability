@@ -1,0 +1,29 @@
+.fa-bars {
+    cursor: pointer;
+}
+
+.nav-item {
+    .nav-link {
+        cursor: pointer;
+        color: #ccc; // Varsayılan renk
+        transition: color 0.2s ease;
+
+        &.active {
+            color: #ffc107; // Varsayılan olarak dark mode kabul edilir
+
+            // Light mode'daysa inherit olarak ayarla
+            :not(.dark-mode) & {
+                color: inherit;
+            }
+
+            font-weight: bold;
+        }
+    }
+
+    // Sadece button olan nav-link için özel stiller
+    button.nav-link {
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+}
